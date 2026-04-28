@@ -402,6 +402,32 @@ async function includeHTML() {
  
 
 <div w3-include-html="footer.html"></div> 
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+function toggleMode(){
+  document.body.classList.toggle("light-mode");
+
+  if(document.body.classList.contains("light-mode")){
+    localStorage.setItem("theme","light");
+    modeIcon.textContent="☀️";
+  } else {
+    localStorage.setItem("theme","dark");
+    modeIcon.textContent="🌙";
+  }
+}
+
+(function(){
+  const saved=localStorage.getItem("theme");
+
+  if(saved==="light"){
+    document.body.classList.add("light-mode");
+    modeIcon.textContent="☀️";
+  }
+})();
+</script>
 
 </body>
 </html>
