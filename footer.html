@@ -1,0 +1,67 @@
+   </div></div>
+
+<footer>
+
+<div class="footer-container footer">
+
+<div class="footer-grid">
+
+<div>
+<div class="footer-title">Navigasi</div>
+<a href="/">Home</a>
+<a href="/artikel">Artikel</a>
+
+</div>
+
+<div>
+<div class="footer-title">Informasi</div>
+<a href="/about">Tentang</a>
+<a href="/contact">Kontak</a>
+<a href="/privacy">Privacy</a>
+</div>
+
+<div>
+<div class="footer-title">Ai Mr Ferdy</div>
+      <p><p><strong>AI Mr Ferdy</strong> adalah platform network yang menghubungkan berbagai tools Artificial Intelligence (AI) terbaik untuk membantu kamu menemukan, membandingkan, dan menggunakannya dengan mudah.</p></p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 AI MR FERDY
+</div>
+
+</div>
+
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+function toggleMode(){
+  document.body.classList.toggle("light-mode");
+
+  if(document.body.classList.contains("light-mode")){
+    localStorage.setItem("theme","light");
+    modeIcon.textContent="☀️";
+  } else {
+    localStorage.setItem("theme","dark");
+    modeIcon.textContent="🌙";
+  }
+}
+
+(function(){
+  const saved=localStorage.getItem("theme");
+
+  if(saved==="light"){
+    document.body.classList.add("light-mode");
+    modeIcon.textContent="☀️";
+  }
+})();
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"e5f949bea76b4376b7f2e2bd3a0070b5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
