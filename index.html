@@ -23,19 +23,69 @@ async function includeHTML() {
 <div w3-include-html="header.html"></div> 
 <script> includeHTML(); </script>
 
+<style>
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
+/* Grid utama */
+.pixabin-tags-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
 
-<style type="text/css">
+/* Card */
+.pixabin-tag-grid {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  padding: 20px 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
 
-/*<![CDATA[*/
+/* Hover */
+.pixabin-tag-grid:hover {
+  transform: translateY(-5px);
+  background: #2a2a2a;
+}
 
-/*Icon Tags*/
+/* Icon */
+.pixabin-tag-grid svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
 
-.pixabin-tags-row{margin:70px 70px 20px 250px}.pixabin-tags-row svg{width:30px;height:30px;display:block;margin:0 auto;margin-bottom:5px}.pixabin-tags-row path{fill:#444;transition:fill .2s}.pixabin-tags-row .pixabin-tag-grid{width:100%;padding:20px 10px;background:#fff;word-wrap:break-word;margin-top:10px;border-radius:4px;box-shadow:inset 0 1px 3px rgba(0,0,0,.2)!important}.pixabin-tags-row .pixabin-tag-grid .icon-title{font-size:14px;font-weight:500;color:#444}.pixabin-tags-row .tag-blogger:hover path{fill:#ff5722}.pixabin-tags-row .tag-wordpress:hover path{fill:#0073aa}.pixabin-tags-row .tag-html5:hover path{fill:#f16529}.pixabin-tags-row .tag-dashboard:hover path{fill:#0073aa}.pixabin-items{position:relative;width:20%;padding-right:8px;padding-left:8px}@media (min-width:768px){.pixabin-items{-ms-flex:27%;flex:27%;max-width:40%}}.bs-row{background:#f1f1f1;padding-bottom:9px;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}@media screen and (max-width:640px){.pixabin-items{flex:37%}.pixabin-tags-row{margin:10px 20px 20px 20px!important}}@media screen and (max-width:480px){.pixabin-items{flex:49%}.pixabin-tags-row{margin:10px 0 10px 0!important}}.bs-row{background:linear-gradient(to right top,#00ff00,#ff0000,#c500c3,#fa0081,#ff0045,#0400ff);padding-bottom:9px;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}            
+.pixabin-tag-grid path {
+  fill: #bbb;
+  transition: 0.3s;
+}
 
-  /*]]>*/
+/* Title */
+.icon-title {
+  font-size: 14px;
+  font-weight: 500;
+}
 
+/* Hover warna */
+.tag-blogger:hover path { fill:#ff5722; }
+.tag-wordpress:hover path { fill:#0073aa; }
+.tag-html5:hover path { fill:#f16529; }
+.tag-dashboard:hover path { fill:#00c853; }
+
+/* Hilangkan style lama */
+.pixabin-items {
+  all: unset;
+}
 </style>
+<div class="container">
+ 
 
 <div class="pixabin-tags-row bs-row text-center">
 
@@ -343,6 +393,8 @@ async function includeHTML() {
 </div>
 
 </a>
+
+</div>
 
 </div>
 
